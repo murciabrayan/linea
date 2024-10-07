@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institución Educativa Santa Lucía</title>
+    <link rel="icon" href="https://scontent-mia3-1.xx.fbcdn.net/v/t39.30808-6/243313756_367826231700880_8894655449896605566_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFWv_jvAW06-PP30cznnjAKhl3D8M1EnlSGXcPwzUSeVOV9aFshuLzbzyHnQoIw3qnSOuAJW0dnHDv72MtePtL0&_nc_ohc=EYDif2UQ-8UQ7kNvgEJxCo3&_nc_ht=scontent-mia3-1.xx&oh=00_AYBL27OYjlLfYYPGAwV09CSvBst2gn8s5ii_Q3J-eRUU4A&oe=670066E3" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: black;
+        }
+
+        .header-container {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            border-bottom: 4px solid white;
+        }
+
+        header {
+            background-color: #FF0000;
+            padding: 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-texto {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 80px;
+            width: auto;
+            margin-right: 15px;
+        }
+
+        .texto-institucion h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        nav {
+            background-color: white;
+            border-radius: 25px;
+            padding: 10px 50px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+        }
+
+        nav ul li a {
+            color: #FF0000;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            color: #FF0000;
+            font-weight: bold;
+        }
+
+        .bienvenidos {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .bienvenidos h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        /* Estilos para el slider */
+        .slider {
+            position: relative;
+            width: 85%; /* Mayor ancho */
+            max-width: 1200px; /* Ancho máximo mayor */
+            margin: 0 auto 40px auto; /* Espacio inferior para separación con noticias */
+            overflow: hidden;
+            border-radius: 10px;
+            height: 350px; /* Menor altura */
+        }
+
+        .slides {
+            display: flex;
+            width: 300%; /* Ajustar según la cantidad de imágenes */
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            width: 100%;
+            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%; /* Asegurarse de que ocupe toda la altura */
+            object-fit: cover; /* Recorta la imagen manteniendo la calidad */
+        }
+
+        /* Botones de navegación */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            z-index: 1;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .noticias {
+            padding: 20px;
+            background-color: #FF0000;
+            color: white;
+            text-align: center;
+        }
+
+        .noticias h2 {
+            margin-bottom: 20px;
+        }
+
+        .noticia {
+            display: inline-block;
+            width: 45%;
+            margin: 10px;
+            vertical-align: top;
+            text-align: left;
+        }
+
+        .noticia img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .plataforma {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .plataforma a {
+            display: inline-block;
+            text-decoration: none;
+            color: #FF0000;
+        }
+
+        .plataforma img {
+            width: 300px;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .plataforma img:hover {
+            transform: scale(1.1);
+        }
+
+        .plataforma p {
+            margin-top: 10px;
+            font-size: 24px;
+            color: #FF0000;
+        }
+
+        footer {
+            background-color: #FF0000;
+            padding: 10px;
+            text-align: center;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <header>
+            <div class="logo-texto">
+                <div class="logo">
+                    <img src="https://scontent-mia3-1.xx.fbcdn.net/v/t39.30808-6/243313756_367826231700880_8894655449896605566_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFWv_jvAW06-PP30cznnjAKhl3D8M1EnlSGXcPwzUSeVOV9aFshuLzbzyHnQoIw3qnSOuAJW0dnHDv72MtePtL0&_nc_ohc=EYDif2UQ-8UQ7kNvgEJxCo3&_nc_ht=scontent-mia3-1.xx&oh=00_AYBL27OYjlLfYYPGAwV09CSvBst2gn8s5ii_Q3J-eRUU4A&oe=670066E3" alt="Logo Institución Educativa Santa Lucía">
+                </div>
+                <div class="texto-institucion">
+                    <h1>INSTITUCIÓN EDUCATIVA<br>SANTA LUCÍA</h1>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="./page2.html">Objetivos</a></li>
+                
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <section class="bienvenidos">
+        <h1>BIENVENIDOS</h1>
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <img src="https://scontent-mia3-1.xx.fbcdn.net/v/t39.30808-6/454396253_1015629883587175_3600090647888982287_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHqyICOSnp0gKM254OAirnCUJn_AtE_6mJQmf8C0T_qYtEi7Q0cF6pZxBoz6mOE8K7mgYDhTcTWHxPb5IBBMBOh&_nc_ohc=DI_M42abhB0Q7kNvgFsBtFe&_nc_ht=scontent-mia3-1.xx&_nc_gid=A-P6Yci9jJ2i8vvNkVEP5I1&oh=00_AYBj6N_LV2-M8xmA9IfwOAX94VnGpFjI2nooIN5r3Ae0MA&oe=67006AEA" alt="Imagen 1">
+                </div>
+                <div class="slide">
+                    <img src="./imagenes/2.png" alt="Imagen 2">
+                </div>
+                <div class="slide">
+                    <img src="./imagenes/3.png" alt="Imagen 3">
+                </div>
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">❮</button>
+            <button class="next" onclick="moveSlide(1)">❯</button>
+        </div>
+    </section>
+
+    <section class="noticias">
+        <h2>NOTICIAS</h2>
+        <div class="noticia">
+            <img src="https://scontent-mia3-2.xx.fbcdn.net/v/t39.30808-6/454610002_1015629953587168_942013511399858230_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFZost9gZOcwr6hpZTSOKunllBvz_Zki-mWUG_P9mSL6QVuUVz8PVOvLXDxewGlXcghAA0dwx5E_zkq0DJvoY10&_nc_ohc=4H1W_1MKlfoQ7kNvgFaxz4z&_nc_ht=scontent-mia3-2.xx&_nc_gid=A_e1vRBBIxP76C42r2siR8c&oh=00_AYCAzxUH0-HRdPYHqTXlOiaF6CLq2pgHHs4uDWJJ5Eu1_w&oe=67006AB6" alt="Imagen noticia 1">
+            <p>El día de ayer el Gimnasio Los Cerros e Instituto Santa Lucia Simijaca participaron en el festival de Bandas...</p>
+        </div>
+        <div class="noticia">
+            <img src="https://scontent-mia3-1.xx.fbcdn.net/v/t39.30808-6/454420597_1015629830253847_2955145337919120800_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeG_oWdGtJGUiDlK6X9AZyBx6YvQopLLPQLpi9Cikss9AiHZcuVIHGfurHe4F97N7sRUcZnVgmHO4BB396SXZi3r&_nc_ohc=mucp_eMHWhcQ7kNvgFgq6Eh&_nc_ht=scontent-mia3-1.xx&_nc_gid=AVlAZ341PfiAi4zNbgA-WMk&oh=00_AYAyN3iY759KAocAclZSlKqIOCfJig3Vot85_kwswzJ4ZA&oe=670082F4" alt="Imagen noticia 2">
+            <p>Hoy se realizó una integración cultural con los estudiantes del Gimnasio Los Cerros...</p>
+        </div>
+    </section>
+
+   
+    <footer>
+        <p>© 2024 Institución Educativa Santa Lucía - Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+
+        function moveSlide(direction) {
+            const slides = document.querySelector('.slides');
+            const totalSlides = document.querySelectorAll('.slide').length;
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+    </script>
+</body>
+</html>
