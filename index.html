@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Institución Educativa Santa Lucía</title>
-    <link rel="icon" href="https://scontent-mia3-1.xx.fbcdn.net/v/t39.30808-6/243313756_367826231700880_8894655449896605566_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFWv_jvAW06-PP30cznnjAKhl3D8M1EnlSGXcPwzUSeVOV9aFshuLzbzyHnQoIw3qnSOuAJW0dnHDv72MtePtL0&_nc_ohc=EYDif2UQ-8UQ7kNvgEJxCo3&_nc_ht=scontent-mia3-1.xx&oh=00_AYBL27OYjlLfYYPGAwV09CSvBst2gn8s5ii_Q3J-eRUU4A&oe=670066E3" type="image/x-icon">
+    <link rel="icon" href="./imagenes/escudo-removebg-preview.png" type="image/x-icon">
     <style>
         * {
             margin: 0;
@@ -12,16 +13,22 @@
             box-sizing: border-box;
         }
 
-        body {
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; 
             font-family: Arial, sans-serif;
             background-color: white;
             color: black;
+            width: 100%;
+            height: 100%;
         }
 
         .header-container {
-            background-color: white;
+            background-color: #FF0000   ;
             padding: 10px;
-            margin: 10px;
+            width: 100%; 
+            margin: 0; 
             border-bottom: 4px solid white;
         }
 
@@ -32,6 +39,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            width: 100%;
         }
 
         .logo-texto {
@@ -83,20 +91,19 @@
             margin-bottom: 10px;
         }
 
-        /* Estilos para el slider */
         .slider {
+            
             position: relative;
-            width: 85%; /* Mayor ancho */
-            max-width: 1200px; /* Ancho máximo mayor */
-            margin: 0 auto 40px auto; /* Espacio inferior para separación con noticias */
+            width: 100%;
+            max-width: 1200px;
+            aspect-ratio: 16 / 9; 
+            margin: 0 auto 40px auto;
             overflow: hidden;
-            border-radius: 10px;
-            height: 350px; /* Menor altura */
         }
 
         .slides {
             display: flex;
-            width: 300%; /* Ajustar según la cantidad de imágenes */
+            width: 100%; 
             transition: transform 0.5s ease-in-out;
         }
 
@@ -110,11 +117,9 @@
 
         .slide img {
             width: 100%;
-            height: 100%; /* Asegurarse de que ocupe toda la altura */
-            object-fit: cover; /* Recorta la imagen manteniendo la calidad */
+            height: auto; 
         }
 
-        /* Botones de navegación */
         .prev, .next {
             position: absolute;
             top: 50%;
@@ -129,11 +134,11 @@
         }
 
         .prev {
-            left: 10px;
+            left: 30px;
         }
 
         .next {
-            right: 10px;
+            right: 30px;
         }
 
         .noticias {
@@ -155,10 +160,10 @@
             text-align: left;
         }
 
-        .noticia img {
-            width: 100%;
+        .imagennoticia {
+            width: 100%; 
             height: auto;
-            margin-bottom: 10px;
+            border: solid;
         }
 
         .plataforma {
@@ -188,6 +193,7 @@
             color: #FF0000;
         }
 
+        /* Footer */
         footer {
             background-color: #FF0000;
             padding: 10px;
@@ -202,10 +208,10 @@
         <header>
             <div class="logo-texto">
                 <div class="logo">
-                    <img src="https://scontent-mia3-1.xx.fbcdn.net/v/t39.30808-6/243313756_367826231700880_8894655449896605566_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFWv_jvAW06-PP30cznnjAKhl3D8M1EnlSGXcPwzUSeVOV9aFshuLzbzyHnQoIw3qnSOuAJW0dnHDv72MtePtL0&_nc_ohc=EYDif2UQ-8UQ7kNvgEJxCo3&_nc_ht=scontent-mia3-1.xx&oh=00_AYBL27OYjlLfYYPGAwV09CSvBst2gn8s5ii_Q3J-eRUU4A&oe=670066E3" alt="Logo Institución Educativa Santa Lucía">
+                    <img src="./imagenes/escudo-removebg-preview.png" alt="Logo Institución Educativa Santa Lucía">
                 </div>
                 <div class="texto-institucion">
-                    <h1>INSTITUCIÓN EDUCATIVA<br>SANTA LUCÍA</h1>
+                    <h1>INSTITUCIÓN EDUCATIVA SANTA LUCÍA</h1>
                 </div>
             </div>
             <nav>
@@ -220,16 +226,21 @@
 
     <section class="bienvenidos">
         <h1>BIENVENIDOS</h1>
+        <p style="color: white;">.</p>
+        <p style="color: white;">.</p>
+        <p style="color: white;">.</p>
+        <p style="color: white;">.</p>
+       
         <div class="slider">
             <div class="slides">
                 <div class="slide">
-                    <img src="https://scontent-mia3-1.xx.fbcdn.net/v/t39.30808-6/454396253_1015629883587175_3600090647888982287_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHqyICOSnp0gKM254OAirnCUJn_AtE_6mJQmf8C0T_qYtEi7Q0cF6pZxBoz6mOE8K7mgYDhTcTWHxPb5IBBMBOh&_nc_ohc=DI_M42abhB0Q7kNvgFsBtFe&_nc_ht=scontent-mia3-1.xx&_nc_gid=A-P6Yci9jJ2i8vvNkVEP5I1&oh=00_AYBj6N_LV2-M8xmA9IfwOAX94VnGpFjI2nooIN5r3Ae0MA&oe=67006AEA" alt="Imagen 1">
+                    <img src="./imagenes/1.png" alt="Imagen 1">
                 </div>
                 <div class="slide">
-                    <img src="./imagenes/2.png" alt="Imagen 2">
+                    <img src="https://scontent-ams2-1.xx.fbcdn.net/v/t39.30808-6/440932956_959378529212311_4084566456786609267_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGhIvvdWWDKRraN1yHLeWJTW4F-ZmtNAx5bgX5ma00DHi9vx1hub5QrtRffO7WKnXIOlLZSDqn94rIc7Vjbtd1R&_nc_ohc=jUg2T3L-6KMQ7kNvgGKnfqN&_nc_ht=scontent-ams2-1.xx&_nc_gid=ANBEv9Yn56a-q-qhIl05N3b&oh=00_AYA1pX5PzEwjiU_hpLVu0Wpr2AwoLv0iWAVMltBcMo4T4g&oe=67020963" alt="Imagen 2">
                 </div>
                 <div class="slide">
-                    <img src="./imagenes/3.png" alt="Imagen 3">
+                    <img src="https://scontent-ams4-1.xx.fbcdn.net/v/t39.30808-6/438782183_948835700266594_1013446301136976784_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHTfqMTi-vbI5YcTbO6FEHVM25ZWeihpSYzbllZ6KGlJhmaF9AVA5w1f7OoJME5P5gUx7sxfeqivq2NcWgf8uTF&_nc_ohc=wKLjQR1-fnQQ7kNvgGqntmI&_nc_ht=scontent-ams4-1.xx&_nc_gid=AqKIK5QRh_JnF0uJ9bDsG1d&oh=00_AYCI9EfJUdKPUDePg6jk8eO_o6Z6j3zWjFBv0vDLlpX8JQ&oe=67020CBF" alt="Imagen 3">
                 </div>
             </div>
             <button class="prev" onclick="moveSlide(-1)">❮</button>
@@ -240,16 +251,18 @@
     <section class="noticias">
         <h2>NOTICIAS</h2>
         <div class="noticia">
-            <img src="https://scontent-mia3-2.xx.fbcdn.net/v/t39.30808-6/454610002_1015629953587168_942013511399858230_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFZost9gZOcwr6hpZTSOKunllBvz_Zki-mWUG_P9mSL6QVuUVz8PVOvLXDxewGlXcghAA0dwx5E_zkq0DJvoY10&_nc_ohc=4H1W_1MKlfoQ7kNvgFaxz4z&_nc_ht=scontent-mia3-2.xx&_nc_gid=A_e1vRBBIxP76C42r2siR8c&oh=00_AYCAzxUH0-HRdPYHqTXlOiaF6CLq2pgHHs4uDWJJ5Eu1_w&oe=67006AB6" alt="Imagen noticia 1">
-            <p>El día de ayer el Gimnasio Los Cerros e Instituto Santa Lucia Simijaca participaron en el festival de Bandas...</p>
+            <img src="./imagenes/2.jpg" alt="Imagen noticia 1" class="imagennoticia">
+            <p>Hoy conmemoramos la valentía de nuestro héroes en la Batalla de Boyacá,  un hecho histórico para nuestro país, es así que el Gimnasio Los Cerros e Instituto  Santa Lucia Simijaca cada 7 de agosto renouevan su compromiso con la libertad y unidad nacional.
+                Agradecemos a cada una de las personas que nos acompañaron el día de hoy.</p>
         </div>
         <div class="noticia">
-            <img src="https://scontent-mia3-1.xx.fbcdn.net/v/t39.30808-6/454420597_1015629830253847_2955145337919120800_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeG_oWdGtJGUiDlK6X9AZyBx6YvQopLLPQLpi9Cikss9AiHZcuVIHGfurHe4F97N7sRUcZnVgmHO4BB396SXZi3r&_nc_ohc=mucp_eMHWhcQ7kNvgFgq6Eh&_nc_ht=scontent-mia3-1.xx&_nc_gid=AVlAZ341PfiAi4zNbgA-WMk&oh=00_AYAyN3iY759KAocAclZSlKqIOCfJig3Vot85_kwswzJ4ZA&oe=670082F4" alt="Imagen noticia 2">
-            <p>Hoy se realizó una integración cultural con los estudiantes del Gimnasio Los Cerros...</p>
+            <img src="./imagenes/3.jpg" alt="Imagen noticia 2" class="imagennoticia">
+            <p>La Banda Músico marcial Infantil Los Cerros de Santa Lucia,  integrada por los estudiantes del Gimnasio Los Cerros  e Instituto Santa Lucia Simijaca  participó del VIII festival de bandas organizado en el municipio de Sutatausa, obteniendo tres menciones de honor 🎖️🎷🎉🎷🎉
+                Gracias a todos nuestros estudiantes y sus familias por acompañarnos en esta gran experiencia, que permite fortalecer  diversas habilidades. </p>
         </div>
     </section>
 
-   
+
     <footer>
         <p>© 2024 Institución Educativa Santa Lucía - Todos los derechos reservados</p>
     </footer>
